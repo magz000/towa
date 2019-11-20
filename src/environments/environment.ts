@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+    firebaseConfig : {
+        apiKey: "AIzaSyDea27cd3oEF_h9oco_mWZUIH2L00kTF6s",
+        authDomain: "towa-test.firebaseapp.com",
+        // databaseURL: "YOUR_DATABASE_URL",
+        projectId: "towa-test",
+        // storageBucket: "YOUR_STORAGE_BUCKET",
+        // messagingSenderId: "YOUR_MESSAGING_SENDER_ID"
+    }
+
 };
 
 /*
