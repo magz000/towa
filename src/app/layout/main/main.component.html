@@ -1,0 +1,35 @@
+<div>
+  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand">Test</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" ngbDropdown #myDrop="ngbDropdown"  placement="bottom-right" display="dynamic">
+            <a class="nav-link dropdown-toggle" id="dropdownManual" ngbDropdownAnchor (click)="myDrop.toggle()">
+              <span *ngIf="userInfo">{{ userInfo.firstName }} {{ userInfo.lastName }} </span>
+              <span class="caret"></span>
+            </a>
+
+            <div ngbDropdownMenu aria-labelledby="dropdownManual">
+              <a class="dropdown-item" (click)="logout()">Logout</a>
+            </div>
+
+            <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="logout()">
+                Logout
+              </a>
+            </div> -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>

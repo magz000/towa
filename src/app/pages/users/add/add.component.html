@@ -1,0 +1,45 @@
+<app-modal-basic #addModal dialogClass="modal-lg">
+  <div class="app-modal-header">
+    <h4 class="modal-title">Edit User</h4>
+    <button type="button" class="close basic-close" (click)="addModal.hide();">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="app-modal-body">
+    <form [formGroup]="userForm">
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label text-md-right">Email</label>
+
+        <div class="col-md-6">
+          <input type="email" class="form-control" formControlName="email"  readonly>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label text-md-right">First Name</label>
+
+        <div class="col-md-6">
+          <input type="text" class="form-control" formControlName="firstName" autofocus>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label text-md-right">Last Name</label>
+
+        <div class="col-md-6">
+          <input type="text" class="form-control" formControlName="lastName">
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-default ripple" (click)="addModal.hide()">Close</button>
+
+    <button type="submit" (click)="save()" class="btn btn-primary ripple light">
+      Save
+    </button>
+  </div>
+</app-modal-basic>
